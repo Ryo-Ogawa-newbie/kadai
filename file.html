@@ -21,7 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(11114d);
+        renderer.setClearColor(0xffffdd);
 
 
         // シーンを作成
@@ -52,16 +52,13 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        //球
-        var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
-        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
-        var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere1.position.set( 0, 0, 0 );
-        sphere2.position.set( 10, 0, 0 );
-        scene.add( sphere1 );
-        scene.add( sphere2 );
-        
+        // 箱を作成
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var box = new THREE.Mesh(geometry, material);
+        box.position.set(0,0,0); //位置を指定
+        scene.add(box);   // シーンに追加
+
         update();
 
         // 毎フレーム時に実行されるループイベントです
@@ -71,11 +68,9 @@
           requestAnimationFrame(update);
 
            // 箱を回転させる
-          sphere1.rotation.x += 0.01;
-          sphere1.rotation.y += 0.01;
+          box.rotation.x += 0.01;
+          box.rotation.y += 0.01;
 
-          sphere2.rotation.x += 0.01;
-          sphere2.rotation.y += 0.01;
         }
       }
     </script>

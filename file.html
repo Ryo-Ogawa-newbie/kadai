@@ -21,7 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xffffdd);
+        renderer.setClearColor(0b0b33);
 
 
         // シーンを作成
@@ -63,7 +63,7 @@
         var sphereGeometry = new THREE.SphereGeometry( 0.5, 20, 20 ); 
         var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
         var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere2.position.set( 10, 0, 0 );
+        sphere2.position.set( 5, 0, 0 );
         scene.add( sphere2 );
 
 

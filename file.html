@@ -62,7 +62,7 @@
         //球
         var sphereGeometry = new THREE.SphereGeometry( 0.5, 20, 20 ); 
         var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
-        var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
+        var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
         sphere2.position.set( 10, 0, 0 );
         scene.add( sphere2 );
 
@@ -102,6 +102,8 @@
           sphere1.rotation.x += 0.01;
           sphere1.rotation.y += 0.01;
 
+          sphere2.rotation.x += 0.01;
+          sphere2.rotation.y += 0.01;
         }
       }
     </script>

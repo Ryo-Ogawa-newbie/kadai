@@ -52,6 +52,12 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
+         // テクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("earth.jpg");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
+        
         //球
         var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
         //半径、垂直方向の分割数、水平方向の分割数

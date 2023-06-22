@@ -60,16 +60,16 @@
         scene.add( sphere1 );
 
         //球
-        var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
+        var sphereGeometry = new THREE.SphereGeometry( 0.05, 32, 32 ); 
         var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
         var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere2.position.set( 3, 0, 0 );
+        sphere2.position.set( 1, 0, 0 );
         scene.add( sphere2 );
 
 
-          // 木テクスチャー読み込み
+          // 星テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture0 = textureLoader.load("img/tree0.png");
+        var texture0 = textureLoader.load("img/star.png");
         // 板ポリ左用
         var mat0 = new THREE.MeshLambertMaterial();
         mat0.map = texture0;
@@ -79,14 +79,14 @@
 
         // 板ポリ左を作成
         var geometry = new THREE.PlaneGeometry(1, 2);
-        var tree0 = new THREE.Mesh(geometry, mat0);
-        tree0.position.set(-1,1,0); //位置を指定
-        scene.add(tree0);
+        var star0 = new THREE.Mesh(geometry, mat0);
+        star0.position.set(-1,1,0); //位置を指定
+        scene.add(star0);
 
         // 板ポリ右を作成
         var geometry = new THREE.PlaneGeometry(1, 2);
-        var tree1 = new THREE.Mesh(geometry, mat1);
-        tree1.position.set(1,1,0); //位置を指定
+        var star1 = new THREE.Mesh(geometry, mat1);
+        star1.position.set(2,2,0); //位置を指定
         scene.add(tree1);
         
 

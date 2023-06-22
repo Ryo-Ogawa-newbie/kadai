@@ -67,9 +67,9 @@
         scene.add( sphere2 );
 
 
-          // 星テクスチャー読み込み
+          // 木テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture0 = textureLoader.load("img/star.png");
+        var texture0 = textureLoader.load("img/tree0.png");
         // 板ポリ左用
         var mat0 = new THREE.MeshLambertMaterial();
         mat0.map = texture0;
@@ -79,14 +79,14 @@
 
         // 板ポリ左を作成
         var geometry = new THREE.PlaneGeometry(1, 2);
-        var star0 = new THREE.Mesh(geometry, mat0);
-        star0.position.set(-1,1,0); //位置を指定
-        scene.add(star0);
+        var tree0 = new THREE.Mesh(geometry, mat0);
+        tree0.position.set(-1,1,0); //位置を指定
+        scene.add(tree0);
 
         // 板ポリ右を作成
         var geometry = new THREE.PlaneGeometry(1, 2);
-        var star1 = new THREE.Mesh(geometry, mat1);
-        star1.position.set(2,2,0); //位置を指定
+        var tree1 = new THREE.Mesh(geometry, mat1);
+        tree1.position.set(1,1,0); //位置を指定
         scene.add(tree1);
         
 

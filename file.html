@@ -5,8 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>背景色を付けた</h1>
- 背景色をつけてみた
+ <h1></h1>
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -52,7 +51,7 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // テクスチャー読み込み
+        //　地球テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("earth.png");
         var mat2 = new THREE.MeshPhongMaterial();
@@ -65,22 +64,15 @@
         sphere1.position.set( 0, 0, 0 );
         scene.add( sphere1 );
 
-        //球
-        var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
-        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800} );
-        var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere2.position.set( 3, 0, 0 );
-        scene.add( sphere2 );
-
-        // 星をスプライトで作成
+        //　星をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("img/star.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
 
-        // 流星群を作成
+        //　流星群を作成
         for (let i = 0; i < 20; i++) {
           const sprite = new THREE.Sprite(material);
-          // ランダムな座標に配置
+          //　ランダムな座標に配置
           sprite.position.x = 2 * (Math.random() - 0.5);
           sprite.position.y = 0.5 * Math.random();
           sprite.position.z = 2 * (Math.random() - 0.5);

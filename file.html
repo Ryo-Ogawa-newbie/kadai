@@ -53,7 +53,7 @@
 
         //　地球テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture1 = textureLoader.load("earth.png");
+        var texture = textureLoader.load("earth.png");
         var mat1 = new THREE.MeshPhongMaterial();
         
        //球
@@ -66,7 +66,7 @@
 
         //　星をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
-        var texture2 = textureLoader.load("img/star.png");
+        var texture = textureLoader.load("img/star.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
 
         //　流星群を作成

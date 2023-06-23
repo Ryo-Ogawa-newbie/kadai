@@ -82,28 +82,6 @@
           scene.add(sprite);
         }
 
-        // 太陽テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture3 = textureLoader.load("img/sun.png");
-        // 板ポリ左用
-        var mat3 = new THREE.MeshLambertMaterial();
-        mat3.map = texture0;
-        // 板ポリ右用
-        var mat4 = new THREE.MeshLambertMaterial({transparent: true});
-        mat4.map = texture0;
-
-        // 板ポリ左を作成
-        var geometry = new THREE.PlaneGeometry(1, 2);
-        var star = new THREE.Mesh(geometry, mat3);
-        star.position.set(0,1,0); //位置を指定
-        scene.add(star);
-
-        // 板ポリ右を作成
-        var geometry = new THREE.PlaneGeometry(1, 2);
-        var tree1 = new THREE.Mesh(geometry, mat4);
-        star.position.set(0,1,0); //位置を指定
-        scene.add(star);
-
         
         update();
 

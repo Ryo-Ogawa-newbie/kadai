@@ -54,7 +54,8 @@
         //　地球テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("earth.png");
-        var mat1 = new THREE.MeshPhongMaterial({transparent:true});
+        var mat1 = new THREE.MeshPhongMaterial();
+        mat1.map = texture;
         
        //球
         var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
